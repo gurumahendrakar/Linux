@@ -72,6 +72,64 @@
 
 		
 
----------------------------Chapter-2 Install Virtual Machine-----------------------
+							Chapter-2 Install Virtual Machine
+							--------------------------------.
 
 
+							Chapter_3 [ The Linux Command Line ]
+							------------------------------------
+						[ ECHO, WHICH, HISTFILE, PATH, TYPE, HISTSIZE ] 
+
+
+		Bash  -- [ Bourne Again Shell ]. By Default Shell Most Linux Distributions.
+		
+				
+
+		> echo HELLO > HELLO.txt. --   ( Writes Data [HELLO.TXT] FILE ).
+		> echo HELLO > 			  --   ( Writes Data Into Stdout. )
+		> echo $PATH 			  --   ( Shows All Enviornment Variables. )	
+
+
+
+		> which $(command-name)   --    ( Returns The Path  )
+		> type ls 				  -- 	( Returns The Path )
+		> type -a $(name) 		  -- 	( Returns The Alias And Shows All Path )
+
+		> echo $HISTFILE 		  --    ( Return .bashhistory path  )
+		> HISTSIZE=10		      -- 	( Only 10 Recently Commands Store. )
+		> ~/.bashistory 		  --    ( Stores Recently Commands. )
+
+
+
+							
+		[ Creating Variables And Showing Variables ]
+
+
+			** READ SECTION.		
+			[ > set ] 					-- ( List Local And Enviornment Variables )
+			[ > env ] 					-- ( Only List The Exported Variables 	  )
+
+
+			> myvar=10  				-- ( Creates Local Variable )
+			> echo $(variable-name)		-- ( Stdout  Local Variable )
+			> zsh  						-- ( myvar was not found )
+			> export myvar				-- ( set the (myvar) is enviornment variable )
+			> set | grep "myvar" 		-- ( founds )
+			> env | grep "myvar"  		-- ( founds )
+
+			> unset $(variable)			-- ( remove the local variable )
+			> export -p 				-- ( listout the exported variables )
+			> export -n $(variable) 	-- ( remove the variable )
+
+
+
+		
+
+		[ Quoteing " " ]
+
+ 			* [ single quote ] -- [ Prints All Character Not Evulate Dollar Sign ]
+			* [ double qoute ] -- [ prints $(env-variable) inside double quote,and escape seuences ]
+			
+				" echo `ls` "  -- ( `` ) This Quotes Runs Only Double Quote.
+				( `` ) 		   -- runs commands within that.
+	
